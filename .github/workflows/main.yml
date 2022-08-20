@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy static
 
 # Controls when the workflow will run
 on:
@@ -34,3 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: list repo content
+        run: |
+          cd $GITHUB_WORKSPACE
+          ls
